@@ -160,7 +160,6 @@ Transform:
   - {fileID: 1862914616}
   - {fileID: 1690316969}
   - {fileID: 1790612208}
-  - {fileID: 825344953}
   - {fileID: 333644839}
   - {fileID: 2045698903}
   - {fileID: 1992198398}
@@ -560,101 +559,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &825344951
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 825344953}
-  - component: {fileID: 825344952}
-  - component: {fileID: 825344954}
-  m_Layer: 0
-  m_Name: EdgeMarker (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!68 &825344952
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825344951}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -6.5, y: 0}
-  - {x: -2.5, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!4 &825344953
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825344951}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 43.10474, y: 1.2784834, z: -0.113251984}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 106705218}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!251 &825344954
-PlatformEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825344951}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RotationalOffset: 0
-  m_UseOneWay: 1
-  m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
-  m_UseSideFriction: 0
-  m_UseSideBounce: 0
-  m_SideArc: 1
 --- !u!1 &854189123
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,7 +804,7 @@ GameObject:
   - component: {fileID: 1343916061}
   - component: {fileID: 1343916060}
   - component: {fileID: 1343916062}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EdgeMarker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +950,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -4424372450760166762, guid: a7321973c0421d74ea838b462b3729e9, type: 3}
-  m_Color: {r: 0.745283, g: 0.3972499, b: 0.63874745, a: 1}
+  m_Color: {r: 0.6509434, g: 0.16887684, b: 0.5046984, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1084,6 +988,7 @@ GameObject:
   - component: {fileID: 1581640718}
   - component: {fileID: 1581640717}
   - component: {fileID: 1581640719}
+  - component: {fileID: 1581640720}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1246,7 +1151,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb0a24369ab15d48a403d3ade8b53d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrounded: 0
   groundCheckRadius: 0.02
+  maxJumpCount: 2
+--- !u!95 &1581640720
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581640714}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4588c779279ead4798182b4c3b1539d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1603100724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,7 +1343,7 @@ GameObject:
   - component: {fileID: 1690316969}
   - component: {fileID: 1690316968}
   - component: {fileID: 1690316970}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EdgeMarker (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1665,7 +1594,7 @@ GameObject:
   - component: {fileID: 1790612208}
   - component: {fileID: 1790612207}
   - component: {fileID: 1790612209}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EdgeMarker (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1760,7 +1689,7 @@ GameObject:
   - component: {fileID: 1862914616}
   - component: {fileID: 1862914615}
   - component: {fileID: 1862914617}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EdgeMarker (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1855,7 +1784,7 @@ GameObject:
   - component: {fileID: 1992198398}
   - component: {fileID: 1992198400}
   - component: {fileID: 1992198399}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EdgeMarker (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
