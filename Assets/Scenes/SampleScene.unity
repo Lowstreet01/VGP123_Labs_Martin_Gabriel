@@ -665,7 +665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 854189124}
   - component: {fileID: 854189125}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BottomBorder (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950068751}
   - component: {fileID: 950068752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BottomBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,6 +1246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb0a24369ab15d48a403d3ade8b53d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundCheckRadius: 0.02
 --- !u!1 &1603100724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,7 +1257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603100725}
   - component: {fileID: 1603100726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BottomBorder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1334,7 +1335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1610197480}
   - component: {fileID: 1610197481}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BottomBorder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1585,7 +1586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1766288489}
   - component: {fileID: 1766288490}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BottomBorder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
